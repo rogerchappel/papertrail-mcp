@@ -1,38 +1,29 @@
 # Roadmap
 
-This roadmap describes intended direction, not a binding delivery promise.
-Review it regularly and update it as the project learns from users,
-contributors, and implementation constraints.
+## 0.1 — Local provenance ledger
 
-## Now
+- Fixture-backed paper schema.
+- Local search across title, authors, abstract, venue, IDs, tags, and query text.
+- Citation/provenance Markdown export.
+- MCP-friendly search, retrieve, inspect, and export tools.
+- Real CLI smoke coverage.
 
-- Define the smallest useful project scope.
-- Keep repository setup, documentation, and verification easy for contributors
-  to follow.
-- Ship small, reviewable improvements.
+## 0.2 — Import/export helpers
 
-## Next
+- BibTeX import/export.
+- DOI/arXiv duplicate hints.
+- Safer schema migration tooling for existing caches.
+- More MCP client configuration examples.
 
-- Add the next capabilities that directly support the project's primary users.
-- Improve tests, docs, and examples around the most used workflows.
-- Reduce setup friction discovered during early use.
+## 0.3 — Explicit adapters
 
-## Later
+- Optional, user-invoked adapters for exported Crossref/arXiv/OpenAlex results.
+- Adapter provenance that records command, source, and retrieval timestamp.
+- No background fetching or hidden credentials.
 
-- Consider larger features after the core workflow is stable.
-- Add automation only where it removes repeated maintainer work.
-- Revisit packaging, deployment, or integration options based on real demand.
+## Not planned for V1
 
-## Not Planned
-
-- Unrelated platform rewrites without a clear migration path.
-- Mandatory dependencies on a single ecosystem unless the project requires it.
-- Public release dates before maintainers are ready to commit to them.
-
-## Roadmap Review
-
-Before each major or meaningful minor release:
-
-- Move completed user-visible work into `CHANGELOG.md`.
-- Remove stale commitments.
-- Promote only the next reviewable set of work into `Now`.
+- Autonomous paper downloading.
+- Hosted service mode.
+- Telemetry.
+- Broad reference-manager replacement.
