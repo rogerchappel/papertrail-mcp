@@ -1,0 +1,32 @@
+{
+  "project": "papertrail-mcp",
+  "role": "local-first MCP paper provenance cache",
+  "commands": {
+    "install": "npm install",
+    "check": "npm run check",
+    "test": "npm test",
+    "build": "npm run build",
+    "smoke": "npm run smoke",
+    "validate": "bash scripts/validate.sh"
+  },
+  "fixtures": [
+    "fixtures/sample/papers.json"
+  ],
+  "mcpTools": [
+    "papertrail_search",
+    "papertrail_retrieve",
+    "papertrail_export_markdown",
+    "papertrail_inspect"
+  ],
+  "safety": {
+    "networkByDefault": false,
+    "telemetry": false,
+    "credentialAccess": false,
+    "writesOutsideOutputPaths": false
+  },
+  "release": {
+    "branch": "main",
+    "publishAutomation": false,
+    "requiredLocalGate": "npm run release:check"
+  }
+}
