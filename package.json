@@ -21,7 +21,7 @@
     "LICENSE"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && chmod +x dist/cli.js",
     "check": "tsc --noEmit",
     "test": "npm run build && node --test dist/**/*.test.js",
     "smoke": "npm run build && bash scripts/smoke.sh",
