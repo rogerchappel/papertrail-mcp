@@ -1,0 +1,74 @@
+{
+  "papers": [
+    {
+      "id": "attention-is-all-you-need-2017",
+      "title": "Attention Is All You Need",
+      "authors": ["Ashish Vaswani", "Noam Shazeer", "Niki Parmar", "Jakob Uszkoreit"],
+      "year": 2017,
+      "venue": "NeurIPS",
+      "abstract": "Introduced the Transformer architecture using attention mechanisms without recurrence.",
+      "url": "https://arxiv.org/abs/1706.03762",
+      "arxivId": "1706.03762",
+      "tags": ["transformers", "deep-learning", "fixtures"],
+      "source": "fixture",
+      "query": "transformer attention architecture",
+      "retrievedAt": "2026-05-04T08:30:00Z"
+    },
+    {
+      "id": "retrieval-augmented-generation-2020",
+      "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+      "authors": ["Patrick Lewis", "Ethan Perez", "Aleksandra Piktus", "Fabio Petroni"],
+      "year": 2020,
+      "venue": "NeurIPS",
+      "abstract": "Combines parametric sequence-to-sequence models with non-parametric memory from retrieved documents.",
+      "url": "https://arxiv.org/abs/2005.11401",
+      "arxivId": "2005.11401",
+      "tags": ["rag", "retrieval", "fixtures"],
+      "source": "fixture",
+      "query": "retrieval augmented generation provenance",
+      "retrievedAt": "2026-05-04T08:31:00Z"
+    },
+    {
+      "id": "model-context-protocol-2024",
+      "title": "Model Context Protocol Specification",
+      "authors": ["Anthropic"],
+      "year": 2024,
+      "venue": "MCP Documentation",
+      "abstract": "Defines a protocol for connecting AI applications to tools and contextual data sources.",
+      "url": "https://modelcontextprotocol.io/",
+      "tags": ["mcp", "agents", "fixtures"],
+      "source": "fixture",
+      "query": "MCP tool protocol local server",
+      "retrievedAt": "2026-05-04T08:32:00Z"
+    }
+  ],
+  "provenance": [
+    {
+      "id": "evt-attention-search",
+      "paperId": "attention-is-all-you-need-2017",
+      "action": "searched",
+      "source": "fixture/papers.json",
+      "query": "transformer attention architecture",
+      "at": "2026-05-04T08:30:00Z",
+      "note": "Seeded local fixture; no network call performed."
+    },
+    {
+      "id": "evt-rag-search",
+      "paperId": "retrieval-augmented-generation-2020",
+      "action": "searched",
+      "source": "fixture/papers.json",
+      "query": "retrieval augmented generation provenance",
+      "at": "2026-05-04T08:31:00Z",
+      "note": "Fixture supports deterministic search tests."
+    },
+    {
+      "id": "evt-mcp-import",
+      "paperId": "model-context-protocol-2024",
+      "action": "imported",
+      "source": "fixture/papers.json",
+      "query": "MCP tool protocol local server",
+      "at": "2026-05-04T08:32:00Z",
+      "note": "Protocol reference recorded as external-record style metadata only."
+    }
+  ]
+}
