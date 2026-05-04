@@ -1,79 +1,44 @@
 # Contributing
 
-Thanks for helping improve `papertrail-mcp`.
+Thanks for helping make PaperTrail MCP calmer and more useful for research agents.
 
-This project values small, reviewable contributions with clear verification.
+## Principles
 
-## Issues
+- Keep V1 local-first: no hidden network calls, scraping, telemetry, or credential discovery.
+- Prefer deterministic fixtures over live services.
+- Make provenance explicit whenever a paper enters the cache.
+- Keep changes small enough to review in one sitting.
 
-Before opening an issue:
+## Development
 
-- Search existing issues.
-- Confirm the issue applies to `papertrail-mcp`.
-- Include enough context for maintainers to understand or reproduce the request.
-
-Bug reports should include:
-
-- What happened.
-- What you expected.
-- Steps to reproduce.
-- Relevant logs, screenshots, or files.
-- The smallest verification step that demonstrates the issue.
-
-Feature requests should include:
-
-- The use case.
-- Why the current project does not solve it.
-- Risks or compatibility concerns.
-- Suggested files or behavior that may need to change.
-
-## Pull Requests
-
-Pull requests should:
-
-- Focus on one reviewable intent.
-- Use a branch.
-- Follow Conventional Commits.
-- Include tests or verification appropriate to the change.
-- Update documentation when behavior or usage changes.
-- Avoid unrelated formatting or dependency churn.
-- Avoid secrets, private contact details, and project-specific sensitive information.
-
-## Review Pack
-
-Use this format for meaningful changes:
-
-```md
-## Review Pack
-Repo:
-Branch:
-PR:
-Task:
-Status: done / blocked / needs review
-Summary:
-Commits:
-Files changed:
-Verification:
-Risk level:
-Rollback plan:
-Human decision needed:
-Next recommended task:
+```bash
+npm install
+npm run check
+npm test
+npm run smoke
+bash scripts/validate.sh
 ```
 
-## Verification
+## Adding behavior
 
-Every contribution should include verification.
+1. Add or update a fixture under `fixtures/`.
+2. Add a test that proves the behavior against the fixture.
+3. Update README/docs when CLI, MCP, schema, or safety behavior changes.
+4. Run the verification commands before opening a PR.
 
-Examples:
+## Commit style
 
-- Documentation: inspect rendered Markdown or review the diff.
-- Tests: run the targeted test command.
-- Types: run the project typecheck.
-- Build: run the smallest build command that covers the change.
-- Manual QA: provide exact steps and observed result.
+Use short conventional-style subjects when practical, for example:
 
-If verification cannot be run, explain why and provide the exact command maintainers should run.
+- `feat: add BibTeX export`
+- `fix: reject invalid provenance events`
+- `docs: clarify MCP client setup`
 
-## Maintainer Review
+## Pull requests
 
-Maintainers may request narrower scope, clearer verification, additional tests, or safer defaults before merging.
+Please include:
+
+- What changed.
+- Why it matters.
+- Verification commands and results.
+- Any security or compatibility notes.
