@@ -1,0 +1,11 @@
+export { readCache, upsertPapers, writeCache } from './cache.js';
+export { citationFor, formatAuthors } from './citation.js';
+export { loadDataset, loadDatasets, mergeDatasets } from './loader.js';
+export { renderMarkdownExport } from './markdown.js';
+export { callMcpTool, listMcpTools } from './mcp.js';
+export { normalizeText, paperHaystack, stablePaperId } from './normalize.js';
+export { parseDataset, parsePaper } from './schema.js';
+export { searchPapers, scorePaper } from './search.js';
+export { handleRequest, runStdioServer } from './stdio-server.js';
+export { summarizeDataset } from './summary.js';
+export type { InspectSummary, PaperAuthor, PaperLink, PaperRecord, PaperSource, PaperTrailDataset, ProvenanceEvent, SearchOptions } from './types.js';
