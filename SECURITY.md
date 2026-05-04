@@ -1,58 +1,34 @@
 # Security Policy
 
-## Supported Versions
+## Supported versions
 
-Replace this section with the supported versions for `papertrail-mcp`.
+PaperTrail MCP is pre-1.0. The `main` branch and latest tagged release receive best-effort security fixes.
 
-Example:
-
-```md
 | Version | Supported |
 | --- | --- |
-| .x | Yes |
-| < .0 | No |
-```
+| 0.x latest | Best effort |
+| older 0.x | No |
 
-If the project does not publish versioned releases yet, say that clearly.
+## Reporting a vulnerability
 
-## Reporting a Vulnerability
+Please do **not** report suspected vulnerabilities in public issues, pull requests, or discussions.
 
-Please do not report suspected vulnerabilities in public issues, pull requests, or discussions.
-
-Ask maintainers for the private security reporting path before sharing details.
-
-If no private reporting path exists yet, ask maintainers through public project channels for a private reporting path. Do not include exploit details, secrets, personal data, or sensitive technical details in public messages.
-
-## What to Include
-
-When a private reporting path is available, include:
-
-- A clear description of the issue.
-- Affected versions, files, packages, workflows, or configuration.
-- Steps to reproduce, proof of concept, or attack scenario when safe to share.
-- Potential impact.
-- Suggested mitigation, if known.
-
-## Response Expectations
-
-Maintainers review good-faith reports as capacity allows.
-
-Do not imply paid support, guaranteed response times, guaranteed fixes, or service-level agreements unless `papertrail-mcp` explicitly provides them.
+Use GitHub private vulnerability reporting when available. If it is not enabled, open a public issue asking for a private reporting path without including exploit details, secrets, personal data, or sensitive technical details.
 
 ## Scope
 
 In scope:
 
-- Vulnerabilities in papertrail-mcp.
-- Insecure default configuration shipped by this project.
-- CI, release, or dependency guidance maintained by this project.
+- Bugs that cause PaperTrail MCP to read or write files outside explicit user-provided paths.
+- CLI or MCP behavior that performs unexpected network, telemetry, or credential access.
+- Unsafe dependency, CI, or release configuration shipped by this repository.
 
 Out of scope:
 
-- General support requests.
-- Requests for guaranteed maintenance timelines.
-- Issues in unrelated downstream projects.
+- Vulnerabilities in unrelated MCP clients.
+- Malicious fixture files supplied intentionally by a local user.
+- General support requests or guaranteed maintenance timelines.
 
-## Disclosure
+## Safety model
 
-Coordinate disclosure with maintainers before publishing vulnerability details.
+V1 is designed to be local-first and deterministic. Commands read local fixture/cache JSON and write only requested output files/directories. Hidden network calls, scraping, telemetry, and credential discovery are considered security regressions.
