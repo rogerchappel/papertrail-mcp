@@ -1,21 +1,15 @@
 # Changelog
 
-All notable changes to this project will be documented in this file.
+All notable changes to PaperTrail MCP will be documented here.
 
-This project follows the [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
-format and uses semantic versioning when versioned releases are published.
-
-## [Unreleased]
+## 0.1.0 - 2026-05-04
 
 ### Added
 
-- Initial project setup.
-
-## Release Links
-
-- Unreleased:
-  `https://github.com/rogerchappel/papertrail-mcp/compare/...HEAD`
-- Latest release:
-  `https://github.com/rogerchappel/papertrail-mcp/releases/latest`
-
-Replace placeholder links once the first release tag exists.
+- Local paper/provenance schema and fixture loader.
+- Deterministic sample fixture for Transformer, RAG, and MCP references.
+- Local CLI commands: `inspect`, `search`, `export`, and `serve`.
+- MCP-friendly tool handlers for search, retrieve, inspect, and Markdown export.
+- JSON-RPC stdio server mode for local MCP clients.
+- Fixture-backed tests and smoke validation.
+- Local-first README, security policy, contribution guide, and orchestration docs.
