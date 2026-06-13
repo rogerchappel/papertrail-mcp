@@ -18,7 +18,10 @@
     "dist",
     "fixtures",
     "README.md",
-    "LICENSE"
+    "LICENSE",
+    "SECURITY.md",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md"
   ],
   "scripts": {
     "build": "tsc && chmod +x dist/cli.js",
@@ -45,5 +48,13 @@
   "devDependencies": {
     "@types/node": "^22.10.2",
     "typescript": "^5.7.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rogerchappel/papertrail-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rogerchappel/papertrail-mcp/issues"
+  },
+  "homepage": "https://github.com/rogerchappel/papertrail-mcp#readme"
 }
